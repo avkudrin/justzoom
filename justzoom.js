@@ -11,7 +11,7 @@ function onNewTab(tab)
 
 function onTabUpdated(id,info,tab)
 {
-    if(tab.openerTabId != id && info.status == "loading")
+    if(info.status == "loading")
     {
         console.log("set default zoom");
         browser.tabs.setZoom(id, minimalZoom);
